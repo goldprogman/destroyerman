@@ -4,3 +4,7 @@ function playerdamage(blow){
 	hp-=3;
 	obj_1x4.alarm[0]=20;
 }
+
+function damage(blow){
+enemydmghandler.enemydamage(blow);	
+}

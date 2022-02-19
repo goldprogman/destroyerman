@@ -87,14 +87,14 @@ if (keyboard_check(ord("Z"))) {
 	obj_you.x=x+24;
 	if (puck.winner!=0) {
 		if (puck.winner=-1) {playerdamage(3);}
-		if (puck.winner=1) {selection=0;}
+		if (puck.winner=1) {damage(3);}
 		instance_destroy(puck); instance_destroy(striker); instance_destroy(opp);
 		battleturn=0; tx=37; bx=601;
 		selection=0;
 	}
 }
 } else {
-	playerdamage(3);
+	//damage(3);
 	battleturn=0;//hhelp me
 }
 }
