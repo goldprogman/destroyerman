@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_puck","path":"sprites/spr_puck/spr_puck.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_puck",
     "tags": [],
     "resourceType": "GMSequence",

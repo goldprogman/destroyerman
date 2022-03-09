@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_buttons","path":"sprites/spr_buttons/spr_buttons.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_buttons",
     "tags": [],
     "resourceType": "GMSequence",
