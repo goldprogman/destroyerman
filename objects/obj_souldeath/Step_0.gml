@@ -12,8 +12,9 @@ image_alpha=0;
 if (animtimer=150) {
 	instance_create_depth(0, 0, 0, obj_gitgud);
 }
-if (animtimer=200&&keyboard_check_pressed(ord("Z"))){
+if (animtimer>=200&&keyboard_check_pressed(ord("Z"))){
 	instance_destroy();
 	room_goto(Room1)
+	audio_stop_sound(snd_gitgud);
 }
 animtimer++;

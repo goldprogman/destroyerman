@@ -134,5 +134,8 @@ if (invuln>0) {invuln--;}
 //3: item choices
 //4: mercy choices
 //5: fight action
+//6: act dialogue
+//7: item dialogue
+//8: mercy dialogu
 //10: enemy dialogue
 //11: enemy turn
