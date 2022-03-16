@@ -16,4 +16,5 @@ instance_destroy(obj_beamorigin);
 instance_destroy(obj_bomb);
 instance_destroy(obj_dynamite);
 instance_destroy(obj_beam);
+tx=37; bx=601;
 }
