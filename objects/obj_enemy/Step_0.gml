@@ -49,6 +49,20 @@ if (attacktimer>300) {
 battleturn=0; atkcleanup();	
 }
 break;
+default: 
+if (attacktimer%40==0){
+bomb1=instance_create_depth(319+100*sign(random_range(-1,1)), random_range(54,174),-100,obj_bomb)
+bomb1.yvel=9;
+bomb1.yacc=-0.15;
+bomb1.image_speed=1.5;
+}
+if (attacktimer%100==0){
+rand=degtorad(random_range(-180,180))
+gren1=instance_create_depth(319+319*sin(rand), 319-319*cos(rand),-100,obj_grenade)
+}
+if (attacktimer>=400){
+battleturn=0;atkcleanup();	
+}
 }}//put breaks BEFORE this line
 attacktimer++;
 /*if (attacktimer%20==0) {

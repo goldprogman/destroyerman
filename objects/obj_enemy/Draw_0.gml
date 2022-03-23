@@ -10,5 +10,5 @@ text = string_copy(textlines[turn],1,currentchar);
 draw_text_ext_colour(400, 105, text, 18, 275,c_black,c_black,c_black,c_black,1);*/
 
 if (texttimer=0) {DialogueScript(textlines[turn]); texttimer++;}
-draw_sprite(spr_dialogsmall, 0, 380, 100);	
+draw_sprite(spr_dialogsmall, 0, 380, 80);	
 }

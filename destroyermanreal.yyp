@@ -35,6 +35,7 @@
     {"id":{"name":"snd_explosion","path":"sounds/snd_explosion/snd_explosion.yy",},"order":0,},
     {"id":{"name":"Sprite18","path":"sprites/Sprite18/Sprite18.yy",},"order":18,},
     {"id":{"name":"spr_1x4","path":"sprites/spr_1x4/spr_1x4.yy",},"order":2,},
+    {"id":{"name":"snd_puck","path":"sounds/snd_puck/snd_puck.yy",},"order":9,},
     {"id":{"name":"obj_puck","path":"objects/obj_puck/obj_puck.yy",},"order":9,},
     {"id":{"name":"obj_dialoguehandler","path":"objects/obj_dialoguehandler/obj_dialoguehandler.yy",},"order":28,},
     {"id":{"name":"spr_dialogsmall","path":"sprites/spr_dialogsmall/spr_dialogsmall.yy",},"order":14,},

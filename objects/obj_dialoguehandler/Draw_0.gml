@@ -1,4 +1,11 @@
 /// @description sex
+if (text=="ARRAYMODE") {
+arraymode=true;
+currenttext=0;
+}
+if (arraymode) {
+text=textarray[currenttext];	
+}
 lookedupfont=fontlookupsheet[font]; //should probably start commenting shit
 if (font=0) {
 draw_set_font(Font1);	
@@ -31,6 +38,9 @@ while (i<=string_length(text)&&i<cut) {
 	i++; letter++;
 }
 if (cut-30>i&&fontwidth=9) {
+	if (arraymode&&currenttext<array_length(textarray)-1) {
+	currenttext++; i=0; cut=0; letter=0; line=0;
+	} else {
 obj_enemy.initializeturn();
-instance_destroy();
+instance_destroy();}
 }

@@ -4,11 +4,11 @@ image_xscale=2+0.01*timer;
 image_yscale=2+0.01*timer;
 x=xstart+random_range(-1,1);
 y=ystart+random_range(-1,1);
-if (timer>=50) {
-transp=60-timer;
-image_alpha=1/transp;
+if (timer>=20) {
+transp=30-timer;
+image_alpha=0.1*transp;
 }
-if (timer>=60) {
+if (timer>=30) {
 instance_destroy();	
 }
 timer++;
