@@ -21,7 +21,7 @@ if (keyboard_check_pressed(ord("Z")))
 	switch (selection) {
 	case (0): battleturn=1; selection=0; rectanglehandler.fightpart=0; fightchoice=false; break;
 	case (1): battleturn=2; selection=0; break;
-	case (2): battleturn=3; selection=0; break;
+	case (2): if (array_length(itemlist)>0) {battleturn=3; selection=0;}; break;
 	}
 }
 break;
@@ -45,6 +45,8 @@ if (keyboard_check_pressed(vk_left)||keyboard_check_pressed(vk_right)||keyboard_
 	rectanglehandler.fightpart=2;
 	selection=0;
 	}
+} else if (keyboard_check_pressed(ord("X"))) {
+battleturn=0; selection=0;
 }
 	
 	break;
@@ -70,6 +72,50 @@ if (keyboard_check_pressed(vk_down)) {
 obj_buttons.image_index=4;
 if (selection<0||selection>3) {
 	selection-=4*sign(selection);
+}
+if (keyboard_check_pressed(ord("Z")))
+{
+	obj_enemy.actchoice=selection;
+	battleturn=6; x=-20; y=-20;
+	} else if (keyboard_check_pressed(ord("X"))) {
+battleturn=0; selection=1;
+}
+break;
+case (3): 
+if (keyboard_check_pressed(vk_left)) {
+	audio_play_sound(snd_menumove, 5, false);
+	selection+=sign(0.5-(selection%2));}
+if (keyboard_check_pressed(vk_right)) {
+	audio_play_sound(snd_menumove, 5, false);
+	selection+=sign(0.5-(selection%2));}
+if (keyboard_check_pressed(vk_up)) {
+	audio_play_sound(snd_menumove, 5, false);
+	selection=(selection+2)%4;}
+if (keyboard_check_pressed(vk_down)) {
+	audio_play_sound(snd_menumove, 5, false);
+	selection=(selection+2)%4;}
+	if (selection>=array_length(itemlist)) {
+selection=array_length(itemlist)-1;}
+if (keyboard_check_pressed(ord("Z"))) {
+	if (itemlist[selection]=="* BloxyCola") {
+	hp+=8;
+	} if (itemlist[selection]=="* ChezBurgr") {
+	hp+=14;
+	}
+	if (hp>20) {hp=20};
+	audio_play_sound(snd_select, 1, false);
+	audio_play_sound(snd_heal, 10, false);
+	itemselection=itemlist[selection];
+	array_delete(itemlist, selection, 1);
+	battleturn=7; selection=0;
+} else if (keyboard_check_pressed(ord("X"))) {
+battleturn=0; selection=2;
+}
+switch (selection) {
+	case (0):x=81; y=287; break;
+	case (1):x=337; y=287; break;
+	case (2):x=81; y=319; break;
+	case (3):x=337; y=319; break;
 }
 break;
 case (5): if (input=1) {
@@ -100,8 +146,22 @@ if (keyboard_check(ord("Z"))) {
 }
 } else {
 	damage(3);
-	battleturn=10;//hhelp me
-	 tx=233; bx=405; x=319; y=319;
+	battleturn=10;
+}
+break;
+case (7):
+x=-100; y=-100;
+if (selection=0) {
+if (itemselection=="* BloxyCola") {
+	if (hp=20) {
+	TextboxScript("* You drank the Bloxy Cola. /n* Your HP was maxed out.")
+	} else {TextboxScript("* You drank the Bloxy Cola. /n* You recovered 8 HP!")}
+}
+if (itemselection=="* ChezBurgr") {
+	if (hp=20) {
+	TextboxScript("* You ate the CheezBurger. /n* Your HP was maxed out.")
+	} else {TextboxScript("* You ate the CheezBurger. /n* You recovered 14 HP!")}
+}selection++;
 }
 break;
 case (11):

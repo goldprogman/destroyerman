@@ -6,3 +6,4 @@ target=0; input=0; fightchoice=false;
 fightwait=false;
 invuln=0;
 itemlist=["* BloxyCola", "* BloxyCola", "* ChezBurgr", "* ChezBurgr"]
+itemselection="";

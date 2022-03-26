@@ -11,4 +11,5 @@ draw_text_ext_colour(400, 105, text, 18, 275,c_black,c_black,c_black,c_black,1);
 
 if (texttimer=0) {DialogueScript(textlines[turn]); texttimer++;}
 draw_sprite(spr_dialogsmall, 0, 380, 80);	
+tx=233; bx=405; obj_soul.x=319; obj_soul.y=319;
 }

@@ -18,3 +18,13 @@ instance_destroy(obj_dynamite);
 instance_destroy(obj_beam);
 tx=37; bx=601;
 }
+
+function textdone(){
+	if (battleturn==6||battleturn==7) {
+		instance_destroy(obj_dialoguehandler); battleturn=10;
+	} else if (battleturn==10) {
+		instance_destroy(obj_dialoguehandler);
+	battleturn=11;
+	obj_enemy.initializeturn();
+	}
+}

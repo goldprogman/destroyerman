@@ -10,11 +10,26 @@ function DialogueScript(textinfo){
 }
 
 function TextboxScript(textinfo){
-	obj=instance_create_depth(0,0,10000,obj_dialoguehandler);
+	obj=instance_create_depth(0,0,-10000,obj_dialoguehandler);
 	if (is_array(textinfo)) {
 	obj.text="ARRAYMODE";
 	obj.textarray=textinfo;
 	} else {
 	obj.text=textinfo;}
 	obj.font=0;
+	obj.beginx=tx+31;
+	obj.beginy=ty+16;
+}
+
+function TextLCOverride(textinfo, linecap){
+	obj=instance_create_depth(0,0,-10000,obj_dialoguehandler);
+	if (is_array(textinfo)) {
+	obj.text="ARRAYMODE";
+	obj.textarray=textinfo;
+	} else {
+	obj.text=textinfo;}
+	obj.font=0;
+	obj.beginx=tx+31;
+	obj.beginy=ty+16;
+	obj.linecapacity=linecap;
 }

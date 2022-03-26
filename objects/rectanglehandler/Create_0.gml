@@ -11,6 +11,6 @@ drawtx=tx;
 drawty=ty;
 drawbx=bx;
 drawby=by;
-acts=["* Check", "* Piss", "* Shid", "* Fard"]
+acts=["* Check", "* Appease", "* Bodge", "* Giggle"]
 fights=["* Destroyerman", " ","* Normal","* Special"]
 fightpart=0;
