@@ -167,7 +167,7 @@ candy.yvel=-5;
 candy.yacc=0.05;
 }
 if (attacktimer=600) {
-battleturn=0; atkcleanup();	
+battleturn=0; atkcleanup(); instance_destroy(obj_candy); instance_destroy(obj_candybomb);	
 }
 }}//put breaks BEFORE this line
 attacktimer++;
