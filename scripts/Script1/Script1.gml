@@ -26,5 +26,7 @@ function textdone(){
 		instance_destroy(obj_dialoguehandler);
 	battleturn=11;
 	obj_enemy.initializeturn();
+	} else if (battleturn==11) {
+	instance_destroy(obj_dialoguehandler);
 	}
 }

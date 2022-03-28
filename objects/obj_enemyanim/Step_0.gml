@@ -6,3 +6,18 @@ legs.y=237+yfly;
 head.y+=yfly;
 arm.y=136+yfly;
 animtimer++;
+if (battleturn=11&&obj_enemy.turn=8) {
+if (obj_enemy.attacktimer>110&&animtimer%36==0&&obj_enemy.attacktimer<900) {
+animtimer--;	
+}
+if (obj_enemy.attacktimer>=150&&obj_enemy.attacktimer<900) {
+head.sprite_index=spr_holyshit;	
+legs.sprite_index=spr_damnbody;
+arm.image_alpha=0;
+}
+if (obj_enemy.attacktimer>=900) {
+	head.sprite_index=spr_head;
+	legs.sprite_index=spr_legs;
+	arm.image_alpha=1;
+}
+}

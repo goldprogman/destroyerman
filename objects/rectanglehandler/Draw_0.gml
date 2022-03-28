@@ -17,3 +17,16 @@ draw_text_ext_colour(tx+319, ty+48, acts[3], 18, 275,c_white,c_white,c_white,c_w
 		for (i=0;i<array_length(obj_soul.itemlist);i++)
 draw_text_ext_colour(tx+63+(256*(i%2)), ty+16+(32*floor(i/2)), obj_soul.itemlist[i], 18, 275,c_white,c_white,c_white,c_white,1);
 	}
+	
+//i have no fucking idea why but it refuses to work otherwise
+if (obj_enemy.turn=6&&battleturn=11) {
+if (obj_enemy.attacktimer<180) {
+draw_set_font(Font1)
+draw_text_ext_colour(250, ty+10, "  HAPPY", 18, 275,c_white,c_white,c_white,c_white,1);
+draw_set_font(Font15)
+draw_text_ext_colour(276, ty+34, "BREAKTIME!!", 16, 275,c_white,c_white,c_white,c_white,1);
+}
+if (obj_enemy.attacktimer>=180) {
+draw_set_font(Font1)
+draw_text_ext_colour(276, ty+10, "SIKE!!!", 16, 275,c_white,c_white,c_white,c_white,1);
+}}

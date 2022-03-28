@@ -57,7 +57,7 @@ bomb1.yacc=-0.15;
 bomb1.image_speed=1.5;
 }
 if (attacktimer%100==0){
-rand=degtorad(random_range(-180,180))
+rand=degtorad(random_range(-90,90))
 gren1=instance_create_depth(319+319*sin(rand), 319-319*cos(rand),-100,obj_grenade)
 }
 if (attacktimer>=400){
@@ -68,8 +68,106 @@ case 5:
 if (attacktimer<60) {
 	yfly-=4;
 }
+if (attacktimer=60) {
+bhb=instance_create_depth(319,by+180,-100,obj_blackholebomb);
+bhbarm=instance_create_depth(319,by+180,-101,obj_cutscenearm);
+bhbarm.image_angle=180;
+}
 if (attacktimer>=60&&attacktimer<90) {
-	
+	bhbarm.y-=6;
+	bhb.y-=6;
+}
+if (attacktimer>=100&&attacktimer<130) {
+bhbarm.y+=6;	
+}
+if (attacktimer>=150) {
+if (attacktimer%45=0) {
+rand=degtorad(random_range(-90,90))
+bomb1=instance_create_depth(319+319*sin(rand), by-319*cos(rand),-100,obj_bomb)
+bomb1.image_speed=floor(random_range(10,20))/10;
+bomb1.xvel=(319-bomb1.x)/90;
+bomb1.yvel=(by-bomb1.y)/90;
+}
+if (attacktimer>=300&&attacktimer<360) {
+yfly+=4;	
+}
+if (attacktimer>=600) {
+battleturn=0; atkcleanup(); instance_destroy(obj_blackholebomb); instance_destroy(obj_cutscenearm);	
+}
+obj_soul.x+=cos(degtorad(point_direction(obj_soul.x,obj_soul.y,319,bx)))*2
+obj_soul.y+=sin(degtorad(point_direction(obj_soul.x,obj_soul.y,319,bx)))*-2
+
+
+}
+break;
+case 6:
+if (attacktimer=180) {
+rand=degtorad(random_range(-90,90))
+gren1=instance_create_depth(319+319*sin(rand), 319-319*cos(rand),-100,obj_grenade)
+rand=degtorad(random_range(-90,90))
+gren2=instance_create_depth(319+319*sin(rand), 319-319*cos(rand),-100,obj_grenade)
+rand=degtorad(random_range(-90,90))
+gren2.fusetimer=150;
+gren3=instance_create_depth(319+319*sin(rand), 319-319*cos(rand),-100,obj_grenade)
+gren3.fusetimer=180;	
+}
+if (attacktimer=400) {
+battleturn=0; atkcleanup();	
+}
+break;
+case 7:
+if (attacktimer%30==0) {
+dynarandom=random_range(-50,50);
+dynax=319+dynarandom+(100*sign(dynarandom));
+dyna1=instance_create_depth(dynax,40+random_range(-20, 20),-100,obj_dynamite)
+dyna1.yvel=10;
+dyna1.yacc=-0.2;
+dyna1.rotvel=10;
+}
+if (attacktimer>300) {
+battleturn=0; atkcleanup();	
+}
+break;
+case 8:
+tx=200; bx=438;
+if (attacktimer>60) {
+if (attacktimer%60==0) {
+instance_create_depth(319+random_range(100,150),-5,-100,obj_meteor)	
+}
+if (attacktimer=150) {
+DialogueScript(["HOLY SHIT ARE THOSE METEORS?", "WHY THE FUCK ARE THERE METEORS HERE?", "I SERIOUSLY DIDNT PLAN THIS ARE YOU SERIOUS?"])	
+}
+if (attacktimer=900) {
+DialogueScript("Man.");	
+}
+if (attacktimer=1000) {
+battleturn=0; atkcleanup();	
+}
+}
+break;
+case 9:
+if (attacktimer%40==0){
+bomb1=instance_create_depth(319+100*sign(random_range(-1,1)), random_range(54,174),-100,obj_bomb)
+bomb1.yvel=9;
+bomb1.yacc=-0.15;
+bomb1.image_speed=1.5;
+}
+if (attacktimer%100==0){
+rand=degtorad(random_range(-90,90))
+gren1=instance_create_depth(319+319*sin(rand), 319-319*cos(rand),-100,obj_grenade)
+}
+if (attacktimer>=400){
+battleturn=0;atkcleanup();	
+}
+break;
+case 10:
+if (attacktimer%60==0) {
+candy=instance_create_depth(random_range(tx,bx),ty+205,-100,obj_candybomb)	
+candy.yvel=-5;
+candy.yacc=0.05;
+}
+if (attacktimer=600) {
+battleturn=0; atkcleanup();	
 }
 }}//put breaks BEFORE this line
 attacktimer++;

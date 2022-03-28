@@ -3,15 +3,20 @@
 if (battleturn==6) {
 if (acttimer=0) {
 switch (actchoice){
-	case 0: TextLCOverride(["* DESTROYERMAN /n  ATK 50(25) /n  DEF 70", "* Likes: Bombs, explosionz, being /n  badass, PWNing and trolling!!! /n* Dislikes: Builderman from bloxpert islands you SUCKz builderman stop banishing knoddy"], 37); break;
+	case 0: TextLCOverride(["* DESTROYERMAN /n* ATK 50(25) /n* DEF 70", "* Likes: Bombs, explosionz, being /n  badass, PWNing and trolling!!! /n* Dislikes: Builderman from bloxpert islands you SUCKz builderman stop banishing knoddy"], 37); turn=9; break;
 	case 1: switch (friendliness) {
 		case 0: TextboxScript("* You mention that you're oddly /n  familiar with explosives. /n* Destroyerman loved that!"); friendliness++; break;
 		default: TextboxScript("* You gave Destroyerman a small /n  kiss. /n* Why did you do that?"); break;
 	} break;
 	case 2: switch (friendliness) {
 		case 1: TextboxScript(["* Through the powers of scripting, you create a faulty bomb.", "* ...It blows up in your face. /n* Destroyerman loved that!"]); friendliness++; break;
+		case 3: TextboxScript(["* Fixing the first oversight, you create another bomb.", "* You try and light it, but it's got a short fuse-!", "* ...It blows up in your face again. /w /n * Destroyerman loved that!"]); friendliness++; break;
+		case 5: TextboxScript(["* You create one more bomb and light it again. /w /n* You toss it into the air, and...", "* You try and light it, but it's got a short fuse-!", "* ...It blows up in your face again. /w /n * Destroyerman loved that!"]); friendliness++; break;
 		} break;
-	case 3: switch (friendliness) {default: acttimer++;}
+	case 3: switch (friendliness) {
+		case 2: TextboxScript("* You snicker with your face covered in ash. /w /n* Destroyerman loved that!"); friendliness++; break;
+		case 4: TextboxScript("You sneeze and cough out some gunpowder and heartily laugh. /w /n* Destroyerman loved that!"); friendliness++; break;
+		}
 } //breaks here
 acttimer++;}
 }

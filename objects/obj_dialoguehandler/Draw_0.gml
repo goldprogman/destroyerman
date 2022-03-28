@@ -3,6 +3,9 @@ if (text=="ARRAYMODE") {
 arraymode=true;
 currenttext=0;
 }
+if (font=1) {
+draw_sprite(spr_dialogsmall, 0, 380, 80);		
+}
 if (arraymode) {
 text=textarray[currenttext];	
 }
