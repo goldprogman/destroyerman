@@ -16,7 +16,15 @@ instance_destroy(obj_beamorigin);
 instance_destroy(obj_bomb);
 instance_destroy(obj_dynamite);
 instance_destroy(obj_beam);
-tx=37; bx=601;
+tx=37; bx=601;	
+with (obj_enemy) {
+fusestage++;
+fusesound=0;
+if (fusestage=2) {
+obj_arm.sprite_index=spr_dangerarm;
+audio_play_sound(snd_dynalight,100,false);
+}
+}
 }
 
 function textdone(){

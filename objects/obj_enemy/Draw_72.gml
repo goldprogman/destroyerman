@@ -14,7 +14,7 @@ thank you (oh and use /w for the pauses)
 if (battleturn==6) {
 if (acttimer=0) {
 switch (actchoice){
-	case 0: TextLCOverride(["* DESTROYERMAN /n* ATK 50(25) /n* DEF 70", "* Likes: Bombs, explosionz, being /n  badass, PWNing and trolling!!! /n* Dislikes: Builderman from bloxpert islands you SUCKz builderman stop banishing knoddy"], 37); turn=9; break;
+	case 0: TextLCOverride(["* DESTROYERMAN /n* ATK 50(25) /n* DEF 70", "* Likes: Bombs, explosionz, being /n  badass, PWNing and trolling!!! /n* Dislikes: Builderman from bloxpert islands you SUCKz builderman stop banishing knoddy"], 37); turn=13; break;
 	case 1: switch (friendliness) { //appease
 		case 0: TextboxScript("* You mention that you're oddly  familiar with explosives. /n* Destroyerman loved that!"); friendliness++; break;
 		case 6: TextboxScript("* You tell Destroyerman what you've learned about pyrotechnics. /n* Destroyerman loved that!"); friendliness++; break;
@@ -28,6 +28,11 @@ switch (actchoice){
 		case 1: TextboxScript(["* Through the powers of scripting, you create a faulty bomb.", "* ...It blows up in your face. /n* Destroyerman loved that!"]); friendliness++; break;
 		case 3: TextboxScript(["* Fixing the first oversight, you create another bomb.", "* You try and light it, but it's got a short fuse-!", "* ...It blows up in your face again. /w /n * Destroyerman loved that!"]); friendliness++; break;
 		case 5: TextboxScript(["* You create one more bomb and light it again. /w /n* You toss it into the air, and...", "* You try and light it, but it's got a short fuse-!", "* ...It blows up in your face again. /w /n * Destroyerman loved that!"]); friendliness++; break;
+		default: rand=floor(random_range(1,4)); switch (rand) {
+			case 1:	TextboxScript(["* With all your intellect, you wrote a script of unfathomable power..!!! /w /n* You're not actually sure what it does.", "* Why did you do that?"]); break;
+			case 2: TextboxScript("* You flop around like a fish. /w /n* Why did you do that?"); break;
+			case 3: TextboxScript(["* You kicked your domino crown at Destroyerman. /w /w But you couldn't bring yourself to do it.", "Why did you do that? "]); break;
+		}
 		} break;
 	case 3: switch (friendliness) { //giggle
 		case 2: TextboxScript("* You snicker with your face covered in ash. /w /n* Destroyerman loved that!"); friendliness++; break;

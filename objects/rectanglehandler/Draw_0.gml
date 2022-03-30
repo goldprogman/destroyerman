@@ -30,3 +30,9 @@ if (obj_enemy.attacktimer>=180) {
 draw_set_font(Font1)
 draw_text_ext_colour(276, ty+10, "SIKE!!!", 16, 275,c_white,c_white,c_white,c_white,1);
 }}
+if (obj_enemy.turn=11&&battleturn=11) {
+draw_set_font(Font1)
+draw_text_ext_colour(250, ty+10, "  HAPPY", 18, 275,c_white,c_white,c_white,c_white,1);
+draw_set_font(Font15)
+draw_text_ext_colour(276, ty+34, "BREAKTIME!!", 16, 275,c_white,c_white,c_white,c_white,1);
+}

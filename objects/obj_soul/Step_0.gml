@@ -138,14 +138,14 @@ if (keyboard_check(ord("Z"))) {
 	obj_you.x=x+24;
 	if (puck.winner!=0) {
 		if (puck.winner=-1) {playerdamage(3);}
-		if (puck.winner=1) {damage(6);}
+		if (puck.winner=1) {if (target=0) {damage(6);} else {obj_enemy.fusestage=-1; obj_arm.sprite_index=spr_arm}}
 		instance_destroy(puck); instance_destroy(striker); instance_destroy(opp);
 		battleturn=10; tx=233; bx=405; x=319; y=319;
 		selection=0;
 	}
 }
 } else {
-	damage(3);
+	if (target=0) {damage(3);} else {obj_enemy.fusestage=-1; obj_arm.sprite_index=spr_arm}
 	battleturn=10;
 }
 break;
@@ -185,6 +185,7 @@ if (hp<=0) {
 	instance_create_depth(x,y,-1000,obj_souldeath);
 	room_goto(Gameover);
 	audio_stop_sound(mus_thedestroyer);
+	audio_stop_sound(snd_fuse);
 }
 if (invuln>0) {invuln--;}
 //show_debug_message(string(selection) + " " + string(battleturn))
