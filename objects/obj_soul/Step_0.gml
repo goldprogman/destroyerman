@@ -6,6 +6,15 @@ case 3: x+=68;
 case 2: x+=65;
 case 1: x+=65;
 }
+if (!instance_exists(obj_dialoguehandler)) {
+switch (flavor) {
+case 0: TextboxScript("* Smells like sulfur."); break;
+case 1: TextboxScript("* Destroyerman makes rude gestures with his missing arm."); break;
+case 2: TextboxScript("* Destroyerman gnaws on a stick of dynamite as if it were a bone."); break;
+case 3: TextboxScript("* Your ears are ringing."); break;
+case 4: TextboxScript("* You bask in Destroyerman's glory."); break;
+case 5: TextboxScript("* Destroyerman dumps more ashes on his hair."); break;
+}}
 if (keyboard_check_pressed(vk_left)) {
 	audio_play_sound(snd_menumove, 5, false);
 	selection--;}
@@ -18,6 +27,7 @@ if (selection<0||selection>3) {
 if (keyboard_check_pressed(ord("Z")))
 {
 	audio_play_sound(snd_select, 10, false);
+	instance_destroy(obj_dialoguehandler);
 	switch (selection) {
 	case (0): battleturn=1; selection=0; rectanglehandler.fightpart=0; fightchoice=false; break;
 	case (1): battleturn=2; selection=0; break;
@@ -165,6 +175,7 @@ if (itemselection=="* ChezBurgr") {
 }
 break;
 case (11):
+flavor=floor(random_range(0,6))
 if (keyboard_check(vk_left)) {
 	x-=3;}
 if (keyboard_check(vk_right)) {
@@ -188,6 +199,7 @@ if (hp<=0) {
 	audio_stop_sound(snd_fuse);
 }
 if (invuln>0) {invuln--;}
+prevturn=battleturn;
 //show_debug_message(string(selection) + " " + string(battleturn))
 //0: your turn, regular
 //1: fight choices

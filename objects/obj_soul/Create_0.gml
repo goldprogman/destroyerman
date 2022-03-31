@@ -7,3 +7,5 @@ fightwait=false;
 invuln=0;
 itemlist=["* BloxyCola", "* BloxyCola", "* ChezBurgr", "* ChezBurgr"]
 itemselection="";
+prevturn=1;
+flavor=floor(random_range(0,6));
