@@ -32,6 +32,7 @@ if (keyboard_check_pressed(ord("Z")))
 	case (0): battleturn=1; selection=0; rectanglehandler.fightpart=0; fightchoice=false; break;
 	case (1): battleturn=2; selection=0; break;
 	case (2): if (array_length(itemlist)>0) {battleturn=3; selection=0;}; break;
+	case (3): battleturn=4; selection=0;
 	}
 }
 break;
@@ -127,6 +128,28 @@ switch (selection) {
 	case (2):x=81; y=319; break;
 	case (3):x=337; y=319; break;
 }
+break;
+case (4): if (obj_enemy.friendliness>=7) {
+	TextboxScript("* /1ONE /0Friend Request!")
+	switch (selection) {
+	case (0):x=113; y=287; break;
+	case (1):x=337; y=287; break;}
+	if (keyboard_check_pressed(ord("Z"))) {
+	if (selection=1) {
+	room_goto(Room3)	
+	} else {battleturn=0}
+}
+if (keyboard_check_pressed(vk_left)) {
+	audio_play_sound(snd_menumove, 5, false);
+	selection+=sign(0.5-(selection%2));}
+if (keyboard_check_pressed(vk_right)) {
+	audio_play_sound(snd_menumove, 5, false);
+	selection+=sign(0.5-(selection%2));}
+} else {
+	x=-50; y=-50;
+}
+if (keyboard_check_pressed(ord("X"))) {
+	battleturn=0;selection=3;}
 break;
 case (5): if (input=1) {
 if (tx!=135) {tx=135; bx=504; fightwait=true;

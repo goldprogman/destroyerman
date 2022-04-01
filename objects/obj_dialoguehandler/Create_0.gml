@@ -16,6 +16,7 @@ modifier=0;
 textarray=[];
 arraymode=false;
 linecapacity=0;
+color=c_white;
 
 beginx=399; beginy=84; 
 //first character     tx+63 and ty+16 FOR TEXTBOX

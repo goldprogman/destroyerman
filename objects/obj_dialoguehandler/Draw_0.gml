@@ -64,11 +64,14 @@ while (i<=string_length(text)&&i<cut) {
 	if (font=1) {
 	draw_text_ext_colour(beginx+(letter*fontwidth), beginy+(lineheight*line), string_char_at(text,i), 18, 275,c_black,c_black,c_black,c_black,1);
 	} else {
+		if (modifier="0") {
+		color=c_white;	
+		} else {color=c_yellow;}
 		shakex=beginx; shakey=beginy;
 		if (string_char_at(text,i)!="*") {
 		if (random(1200)>=1198) {shakex+=sign(random_range(-1, 1));}
 		if (random(1200)>=1198) {shakey+=sign(random_range(-1, 1));}}
-		draw_text_ext_colour(shakex+(letter*fontwidth), shakey+(lineheight*line), string_char_at(text,i), 18, 275,c_white,c_white,c_white,c_white,1);}
+		draw_text_ext_colour(shakex+(letter*fontwidth), shakey+(lineheight*line), string_char_at(text,i), 18, 275,color,color,color,color,1);}
 	break;}
 	i++; letter++;
 }

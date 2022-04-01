@@ -1,3 +1,4 @@
+randomize();
 globalvar battleturn;
 battleturn=0;
 selection=0;

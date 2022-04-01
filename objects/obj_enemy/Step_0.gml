@@ -1,5 +1,20 @@
 /// @description attacks
-if (fusestage=2) {
+if (enemyhp<=0) {
+if (attacktimer<30) {
+yfly+=4;
+}
+if (attacktimer=30) {
+	instance_create_depth(obj_arm.x, obj_arm.y, -100, obj_bom);
+}
+if (attacktimer>=30) {
+yfly-=10;	
+}
+if (attacktimer>=150) {
+room_goto(Room3);	
+}
+}else if (friendliness>=7) {
+if (attacktimer=10) {battleturn=0}	
+} else if (fusestage=2) {
 	fusesound++;
 	if (fusesound=13) {audio_play_sound(snd_fuse,100,true)}
 } else {audio_stop_sound(snd_fuse)}
@@ -249,6 +264,12 @@ dyna1.yvel=-10;
 dyna1.yacc=0.25;
 dyna1.rotvel=10;
 dyna1.verticality=true;
+}
+break;
+case 15:
+if (attacktimer>20) {
+attacktimer=0;
+fusestage=2;
 }
 }}}//put breaks BEFORE this line
 attacktimer++;

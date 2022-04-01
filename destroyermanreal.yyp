@@ -36,6 +36,7 @@
     {"id":{"name":"spr_striker","path":"sprites/spr_striker/spr_striker.yy",},"order":12,},
     {"id":{"name":"obj_souldeath","path":"objects/obj_souldeath/obj_souldeath.yy",},"order":18,},
     {"id":{"name":"obj_gitgud","path":"objects/obj_gitgud/obj_gitgud.yy",},"order":20,},
+    {"id":{"name":"Room3","path":"rooms/Room3/Room3.yy",},"order":2,},
     {"id":{"name":"snd_hurt","path":"sounds/snd_hurt/snd_hurt.yy",},"order":1,},
     {"id":{"name":"snd_explosion","path":"sounds/snd_explosion/snd_explosion.yy",},"order":0,},
     {"id":{"name":"spr_candy3","path":"sprites/spr_candy3/spr_candy3.yy",},"order":36,},
@@ -51,6 +52,7 @@
     {"id":{"name":"spr_dialogsmall","path":"sprites/spr_dialogsmall/spr_dialogsmall.yy",},"order":14,},
     {"id":{"name":"rectanglehandler","path":"objects/rectanglehandler/rectanglehandler.yy",},"order":6,},
     {"id":{"name":"obj_dynamite","path":"objects/obj_dynamite/obj_dynamite.yy",},"order":17,},
+    {"id":{"name":"Sprite38","path":"sprites/Sprite38/Sprite38.yy",},"order":38,},
     {"id":{"name":"Font2","path":"fonts/Font2/Font2.yy",},"order":1,},
     {"id":{"name":"snd_heal","path":"sounds/snd_heal/snd_heal.yy",},"order":10,},
     {"id":{"name":"spr_beam","path":"sprites/spr_beam/spr_beam.yy",},"order":17,},
@@ -109,6 +111,7 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"Gameover","path":"rooms/Gameover/Gameover.yy",},},
+    {"roomId":{"name":"Room3","path":"rooms/Room3/Room3.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
