@@ -16,7 +16,8 @@ instance_destroy(obj_beamorigin);
 instance_destroy(obj_bomb);
 instance_destroy(obj_dynamite);
 instance_destroy(obj_beam);
-tx=37; bx=601;	
+instance_destroy(obj_bom);
+tx=37; bx=601; ty=255;
 with (obj_enemy) {
 fusestage++;
 fusesound=0;

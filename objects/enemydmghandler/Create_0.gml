@@ -1,5 +1,5 @@
 globalvar enemyhp;
-enemymaxhp=20;
+enemymaxhp=100;
 enemyhp=enemymaxhp;
 showhp=enemyhp;
 timer=0;

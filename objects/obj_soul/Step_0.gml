@@ -130,12 +130,11 @@ switch (selection) {
 }
 break;
 case (4): if (obj_enemy.friendliness>=7) {
-	TextboxScript("* /1ONE /0Friend Request!")
 	switch (selection) {
-	case (0):x=113; y=287; break;
-	case (1):x=337; y=287; break;}
+	case (0):x=113; y=319; break;
+	case (1):x=337; y=319; break;}
 	if (keyboard_check_pressed(ord("Z"))) {
-	if (selection=1) {
+	if (selection=0) {
 	room_goto(Room3)	
 	} else {battleturn=0}
 }
@@ -171,14 +170,14 @@ if (keyboard_check(ord("Z"))) {
 	obj_you.x=x+24;
 	if (puck.winner!=0) {
 		if (puck.winner=-1) {playerdamage(3);}
-		if (puck.winner=1) {if (target=0) {damage(6);} else {obj_enemy.fusestage=-1; obj_arm.sprite_index=spr_arm}}
+		if (puck.winner=1) {if (target=0) {damage(24);} else {obj_enemy.fusestage=-1; obj_arm.sprite_index=spr_arm}}
 		instance_destroy(puck); instance_destroy(striker); instance_destroy(opp);
 		battleturn=10; tx=233; bx=405; x=319; y=319;
 		selection=0;
 	}
 }
 } else {
-	if (target=0) {damage(3);} else {obj_enemy.fusestage=-1; obj_arm.sprite_index=spr_arm}
+	if (target=0) {damage(12);} else {obj_enemy.fusestage=-1; obj_arm.sprite_index=spr_arm}
 	battleturn=10;
 }
 break;

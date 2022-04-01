@@ -1,5 +1,9 @@
 /// @description attacks
-if (enemyhp<=0) {
+if (fusestage=2) {
+	fusesound++;
+	if (fusesound=13) {audio_play_sound(snd_fuse,100,true)}
+} else {audio_stop_sound(snd_fuse)}
+if (enemyhp<=0&&battleturn=11) {
 if (attacktimer<30) {
 yfly+=4;
 }
@@ -12,13 +16,9 @@ yfly-=10;
 if (attacktimer>=150) {
 room_goto(Room3);	
 }
-}else if (friendliness>=7) {
-if (attacktimer=10) {battleturn=0}	
-} else if (fusestage=2) {
-	fusesound++;
-	if (fusesound=13) {audio_play_sound(snd_fuse,100,true)}
-} else {audio_stop_sound(snd_fuse)}
-if (battleturn==11) {
+}else if (friendliness>=7&&battleturn=11) {
+if (attacktimer>=10) {battleturn=0; atkcleanup();}	
+} else if (battleturn==11) {
 if (fusestage=2) {
 if (attacktimer<60) {
 yfly+=4;
@@ -264,6 +264,9 @@ dyna1.yvel=-10;
 dyna1.yacc=0.25;
 dyna1.rotvel=10;
 dyna1.verticality=true;
+}
+if (attacktimer>=600) {
+battleturn=0; atkcleanup();	
 }
 break;
 case 15:

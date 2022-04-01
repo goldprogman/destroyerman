@@ -20,9 +20,7 @@ I THOUGHT YOU WERE JUST SOME TECHY SCRIPTING NERD.
 FROM ONE BOMBER TO ANOTHER, HOW ABOUT WE CALL IT A TIE AND BECOME FRIENDS? */
 friendliness++;
 }
-if (friendliness=8&&enemyhp>0) {
-battleturn=11;	
-}
+if (friendliness>=8&&!instance_exists(obj_dialoguehandler)) {battleturn=11}
 if (texttimer=0) {DialogueScript(textlines[turn]); texttimer++;}
 draw_sprite(spr_dialogsmall, 0, 380, 80);	
 tx=233; bx=405; obj_soul.x=319; obj_soul.y=319;
