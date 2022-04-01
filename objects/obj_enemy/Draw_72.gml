@@ -14,7 +14,7 @@ thank you (oh and use /w for the pauses)
 if (battleturn==6) {
 if (acttimer=0) {
 switch (actchoice){
-	case 0: TextLCOverride(["* DESTROYERMAN /n* ATK 50(25) /n* DEF 70", "* Likes: Bombs, explosionz, being /n  badass, PWNing and trolling!!! /n* Dislikes: Builderman from bloxpert islands you SUCKz builderman stop banishing knoddy"], 37); friendliness=7; break;
+	case 0: TextLCOverride(["* DESTROYERMAN /n* ATK 50(25) /n* DEF 70", "* Likes: Bombs, explosionz, being /n  badass, PWNing and trolling!!! /n* Dislikes: Builderman from bloxpert islands you SUCKz builderman stop banishing knoddy"], 37); break;
 	case 1: switch (friendliness) { //appease
 		case 0: TextboxScript("* You mention that you're oddly  familiar with explosives. /n* Destroyerman loved that!"); friendliness++; break;
 		case 6: TextboxScript("* You tell Destroyerman what you've learned about pyrotechnics. /n* Destroyerman loved that!"); friendliness++; break;
