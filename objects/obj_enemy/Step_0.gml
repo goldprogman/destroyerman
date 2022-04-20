@@ -190,7 +190,7 @@ battleturn=0;atkcleanup();
 }
 break;
 case 10:
-if (attacktimer%60==0) {
+if (attacktimer%90==0) {
 candy=instance_create_depth(random_range(tx,bx),ty+205,-100,obj_candybomb)	
 candy.yvel=-5;
 candy.yacc=0.05;

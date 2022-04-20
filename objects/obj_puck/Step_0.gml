@@ -8,6 +8,10 @@ if (!obj_soul.fightwait&&!init) {
 x+=xvel; y+=yvel;
 topcollision=y-15; bottomcollision=y+15;
 if (topcollision<ty||bottomcollision>by) {
+	if (!obj_soul.fightwait) {
+	if (topcollision<ty) {y=ty+15}
+	if (bottomcollision>by) {y=by-15}
+	}
 yvel*=-1;
 yvel/=0.98;
 }
