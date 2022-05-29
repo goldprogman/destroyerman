@@ -135,6 +135,8 @@ case (4): if (obj_enemy.friendliness>=7) {
 	case (1):x=337; y=319; break;}
 	if (keyboard_check_pressed(ord("Z"))) {
 	if (selection=0) {
+	instance_create_depth(0,0,-999,obj_ending);
+	obj_ending.endid=2;
 	room_goto(Room3)	
 	} else {battleturn=0}
 }
@@ -196,7 +198,9 @@ if (itemselection=="* ChezBurgr") {
 }selection++;
 }
 break;
+case (10): obj_buttons.image_index=4; break;
 case (11):
+obj_buttons.image_index=4;
 flavor=floor(random_range(0,6))
 if (keyboard_check(vk_left)) {
 	x-=3;}

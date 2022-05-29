@@ -22,6 +22,9 @@ texttimer++;
 if (string_char_at(text,cut)=="/"&&string_char_at(text,cut+1)=="w") {
 additionalwait=1;
 } else {additionalwait=0;}
+if (string_char_at(text,cut)=="/"&&string_char_at(text,cut+1)=="L") {
+obj_enemy.fusestage=2;
+}
 if (texttimer>=timedelay+(30*additionalwait)) {
 cut++;
 if (cut<=string_length(text)&&string_char_at(text,cut)!=" "){

@@ -20,11 +20,11 @@ draw_text_ext_colour(tx+63+(256*(i%2)), ty+16+(32*floor(i/2)), obj_soul.itemlist
 	
 	if (battleturn==4) {
 		if (obj_enemy.friendliness>=7) {
-			draw_text_ext_colour(tx+63, ty+16, "* ONE Friend Request", 18, 275,c_white,c_white,c_white,c_white,1);
+			draw_text_ext_colour(tx+63, ty+16, "* ONE Friend Request", 18, 999,c_white,c_white,c_white,c_white,1);
 draw_text_ext_colour(tx+95, ty+48, "Accept", 18, 275,c_white,c_white,c_white,c_white,1);
 draw_text_ext_colour(tx+319, ty+48, "Deny", 18, 275,c_white,c_white,c_white,c_white,1);
 	} else {
-	draw_text_ext_colour(tx+63, ty+16, "* ZERO Friend Requests", 18, 275,c_white,c_white,c_white,c_white,1);
+	draw_text_ext_colour(tx+63, ty+16, "* ZERO Friend Requests", 18, 999,c_white,c_white,c_white,c_white,1);
 	}}
 	
 //i have no fucking idea why but it refuses to work otherwise

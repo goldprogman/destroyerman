@@ -14,7 +14,9 @@ if (attacktimer>=30) {
 yfly-=10;	
 }
 if (attacktimer>=150) {
-room_goto(Room3);	
+instance_create_depth(0,0,-999,obj_ending);
+obj_ending.endid=1;
+room_goto(Room3);
 }
 }else if (friendliness>=7&&battleturn=11) {
 if (attacktimer>=10) {battleturn=0; atkcleanup();}	
@@ -270,9 +272,16 @@ battleturn=0; atkcleanup();
 }
 break;
 case 15:
-if (attacktimer>20) {
-attacktimer=0;
-fusestage=2;
+if (attacktimer=0) {
+	instance_create_depth(obj_arm.x, obj_arm.y, -100, obj_bom);
+}
+if (attacktimer>=0) {
+yfly-=10;	
+}
+if (attacktimer>=150) {
+instance_create_depth(0,0,-999,obj_ending);
+obj_ending.endid=0;
+room_goto(Room3);
 }
 }}}//put breaks BEFORE this line
 attacktimer++;

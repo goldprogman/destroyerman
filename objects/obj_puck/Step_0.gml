@@ -11,6 +11,7 @@ if (topcollision<ty||bottomcollision>by) {
 	if (!obj_soul.fightwait) {
 	if (topcollision<ty) {y=ty+15}
 	if (bottomcollision>by) {y=by-15}
+	audio_play_sound(snd_puck,10,false);
 	}
 yvel*=-1;
 yvel/=0.98;
@@ -22,6 +23,7 @@ if (place_meeting(x, y, obj_you)) {
 	yvel=(y-obj_you.y)*0.3;
 	x=200;
 	show_debug_message("you ding")
+	audio_play_sound(snd_puck,10,false);
 }
 if (x<130) {
 winner=-1;	
@@ -34,6 +36,7 @@ if (place_meeting(x, y, obj_opponent)) {
 	x=440;
 	yvel=(y-obj_opponent.y)*0.3;
 	show_debug_message("opponent ding")
+    audio_play_sound(snd_puck,10,false);
 }
 if (x>479) {
 	winner=1;

@@ -11,14 +11,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_puck.mp3",
-  "duration": 0.130612,
+  "soundFile": "snd_meteorfall.wav",
+  "duration": 1.394649,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "snd_puck",
+  "name": "snd_meteorfall",
   "tags": [],
   "resourceType": "GMSound",
 }

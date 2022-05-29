@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 0,
+  "bbox_right": 639,
   "bbox_top": 0,
-  "bbox_bottom": 0,
+  "bbox_bottom": 479,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 64,
-  "height": 64,
+  "width": 640,
+  "height": 480,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b45ef6dc-8fc3-4373-87fa-e458d98686e2","path":"sprites/Sprite38/Sprite38.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b45ef6dc-8fc3-4373-87fa-e458d98686e2","path":"sprites/Sprite38/Sprite38.yy",},"LayerId":{"name":"e646dfa9-113e-4e00-8928-5b0233e37115","path":"sprites/Sprite38/Sprite38.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"Sprite38","path":"sprites/Sprite38/Sprite38.yy",},"resourceVersion":"1.0","name":"b45ef6dc-8fc3-4373-87fa-e458d98686e2","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"094bdb4b-a741-4494-99cd-f20f5c48088c","path":"sprites/spr_genocideend/spr_genocideend.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"094bdb4b-a741-4494-99cd-f20f5c48088c","path":"sprites/spr_genocideend/spr_genocideend.yy",},"LayerId":{"name":"71272a56-7269-496e-9b37-388129bb67b0","path":"sprites/spr_genocideend/spr_genocideend.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_genocideend","path":"sprites/spr_genocideend/spr_genocideend.yy",},"resourceVersion":"1.0","name":"094bdb4b-a741-4494-99cd-f20f5c48088c","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"Sprite38","path":"sprites/Sprite38/Sprite38.yy",},
+    "spriteId": {"name":"spr_genocideend","path":"sprites/spr_genocideend/spr_genocideend.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"0c187d57-758b-4ccd-b6f8-7091b3ec2eac","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b45ef6dc-8fc3-4373-87fa-e458d98686e2","path":"sprites/Sprite38/Sprite38.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b2794369-d48c-47be-b263-ff5125df7519","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"094bdb4b-a741-4494-99cd-f20f5c48088c","path":"sprites/spr_genocideend/spr_genocideend.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"Sprite38","path":"sprites/Sprite38/Sprite38.yy",},
+    "parent": {"name":"spr_genocideend","path":"sprites/spr_genocideend/spr_genocideend.yy",},
     "resourceVersion": "1.4",
-    "name": "Sprite38",
+    "name": "spr_genocideend",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e646dfa9-113e-4e00-8928-5b0233e37115","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"71272a56-7269-496e-9b37-388129bb67b0","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Sprite38",
+  "name": "spr_genocideend",
   "tags": [],
   "resourceType": "GMSprite",
 }

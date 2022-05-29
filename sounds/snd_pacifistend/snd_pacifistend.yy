@@ -11,14 +11,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_puck.mp3",
-  "duration": 0.130612,
+  "soundFile": "snd_pacifistend.mp3",
+  "duration": 68.78041,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "snd_puck",
+  "name": "snd_pacifistend",
   "tags": [],
   "resourceType": "GMSound",
 }

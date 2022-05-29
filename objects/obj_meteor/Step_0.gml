@@ -1,7 +1,7 @@
-x+=sin(degtorad(image_angle))*rand;
-y+=cos(degtorad(image_angle))*rand;
+x+=sin(degtorad(image_angle))*(rand*1.5);
+y+=cos(degtorad(image_angle))*(rand*1.5);
 if (y>by) {
-audio_play_sound(snd_explosion,10,false)
 instance_create_depth(x,y,-100,obj_bom)
+audio_play_sound(snd_meteor,10,false)
 instance_destroy();
 }
